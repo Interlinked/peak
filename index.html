@@ -13,17 +13,18 @@
   <div id="demo" class="demo">gamer</div>  
   <script>
 
-let base = ["..?", "--??!", "??..-", ".??", "-->..", "...", "+..", "--/-?", "00-", "[{/-", "{?}", "[[]]", "--/", "]??","+/]","+?+[]","]_?-","+[/]","+]","+-","]+?","?+?","/+?","+?","????","??????"];
+let base = ["..?", "--??!", "??..-", "?-.!", "??--..", ".??", "-->..", "...", "+..", "--/-?", "00-", "[{/-", "{?}", "[[]]","--/","]??","+/]","+?+[]","]_?-","+[/]","+]","+-","]+?","?+?","/+?-","+?.."];
 let trans = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-let person = prompt("input john message"); 
+let person = prompt("Input your message:");
 let fin = [];
 
-let entry = person.split(" ");
+let words = person.split(" ");
 
-for (let i = 0; i < base.length; i++) {
-    for (let t = 0; t < entry.length; t++) {
-        if (entry[t] === base[i]) {
+for (let w = 0; w < words.length; w++) {
+    for (let i = 0; i < base.length; i++) {
+        if (words[w] === base[i]) {
             fin.push(trans[i]);
+            break; // Exit the loop once a match is found
         }
     }
 }
