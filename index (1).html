@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <div id="demo" class="demo">gamer</div>  
+  <script>
+let base = ["..?", "--??!", "??..-", ".??", "-->..", "...", "+..", "--/-?", "00-", "[{/-", "{?}", "[[]]", "--/", "]??","+/]","+?+[]","]_?-","+[/]","+]","+-","]+?","?+?","/+?","+?"," "," "];
+let trans = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+let person = input("input john message"); 
+let fin = [];
+
+let entry = person.split(" ");
+
+for (let i = 0; i < base.length; i++) {
+    for (let t = 0; t < entry.length; t++) {
+        if (entry[t] === base[i]) {
+            fin.push(trans[i]);
+        }
+    }
+}
+
+alert(fin.join(''));
+    </script>
+</body>
+
+
+</html>
